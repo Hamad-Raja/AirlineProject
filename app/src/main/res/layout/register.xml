@@ -5,85 +5,104 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:layout_marginTop="130dp"
-    android:background="@android:color/white">
+    android:background="#242323">
+
+    <!-- Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-30dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plane" />
 
     <!-- Full Name Label -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Full Name"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"
+        android:text="Enter your full name"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="4dp" />
+        android:textColor="@android:color/white" />
 
     <!-- Full Name Input -->
     <EditText
         android:id="@+id/etFullName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your full name"
+        android:layout_height="48dp"
+
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
         android:inputType="textPersonName"
         android:padding="10dp"
-        android:layout_marginBottom="10dp" />
+        android:hint="full Name"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black" />
 
     <!-- Username Label -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"
+        android:layout_marginBottom="4dp"
+        android:text="Enter your username"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="4dp" />
+        android:textColor="@android:color/white" />
 
     <!-- Username Input -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your username"
+        android:layout_height="48dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:layout_marginBottom="10dp" />
+        android:hint="Username"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black" />
 
     <!-- Password Label -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Password"
+        android:layout_marginBottom="4dp"
+        android:text="Enter your password"
         android:textSize="16sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="4dp" />
+        android:textColor="@android:color/white" />
 
     <!-- Password Input -->
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your password"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="10dp"
+        android:hint="Password"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginBottom="20dp" />
+        android:background="@android:color/white"
+        android:textColor="@android:color/black" />
 
     <!-- Register Button -->
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:backgroundTint="@color/purple_500"
-        android:textColor="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@android:color/holo_blue_light"
         android:padding="12dp"
-        android:layout_marginBottom="10dp" />
+        android:text="Register"
+        android:textColor="@android:color/white" />
 
     <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:padding="12dp"
         android:text="Login"
-        android:backgroundTint="@color/teal_700"
-        android:textColor="@android:color/white"
-        android:padding="12dp" />
+        android:textColor="@android:color/white" />
 
 </LinearLayout>
