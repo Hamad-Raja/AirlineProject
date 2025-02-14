@@ -24,31 +24,31 @@
             android:hint="Flight Number" />
 
         <EditText
-            android:id="@+id/flightName"
+            android:id="@+id/departure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Departure"
             android:layout_marginTop="8dp" />
 
         <EditText
-            android:id="@+id/departureTime"
+            android:id="@+id/departuredate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Departure Time (e.g., 10:00 AM)"
-            android:layout_marginTop="8dp" />
-
-        <EditText
-            android:id="@+id/arrivalTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Arrival Time"
-            android:layout_marginTop="8dp" />
+            android:hint="Departure Time (e.g.,yyyy-MM-dd HH:mm:ss)"
+            android:layout_marginTop="8dp"
+            android:inputType="datetime"/>
 
         <EditText
             android:id="@+id/destination"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Destination"
+            android:layout_marginTop="8dp" />
+        <EditText
+            android:id="@+id/seats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Available Seats"
             android:layout_marginTop="8dp" />
 
         <Button
