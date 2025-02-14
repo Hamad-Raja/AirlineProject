@@ -45,20 +45,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
-        android:text="Enter your username"
+        android:text="Enter your Email"
         android:textSize="16sp"
         android:textColor="@android:color/white" />
 
     <!-- Username Input -->
     <EditText
-        android:id="@+id/etUsername"
+        android:id="@+id/etemail"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginBottom="10dp"
         android:layout_marginStart="10dp"
         android:inputType="textEmailAddress"
         android:padding="10dp"
-        android:hint="Username"
+        android:hint="Email"
         android:background="@android:color/white"
         android:textColor="@android:color/black" />
 
