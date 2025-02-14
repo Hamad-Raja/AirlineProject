@@ -50,7 +50,12 @@
             android:layout_height="wrap_content"
             android:hint="Available Seats"
             android:layout_marginTop="8dp" />
-
+        <EditText
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:layout_marginTop="8dp" />
         <Button
             android:id="@+id/addFlightButton"
             android:layout_width="match_parent"

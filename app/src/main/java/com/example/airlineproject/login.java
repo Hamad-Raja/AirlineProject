@@ -50,7 +50,10 @@ public class login extends AppCompatActivity {
 
     // Method to check login credentials from the database
     private void checkLogin(String email, String password) {
-        if(email=="admin@gmail.com"&&password=="admin")
+        String adminUser  = "admin@gmail.com";
+        String adminPassword  = "admin";
+
+        if(email.equals(adminUser) && password.equals(adminPassword))
         {
             Intent intent = new Intent(login.this, admin.class);
             startActivity(intent);
