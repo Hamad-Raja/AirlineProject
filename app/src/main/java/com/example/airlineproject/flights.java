@@ -147,7 +147,7 @@ public class flights extends AppCompatActivity {
                     runOnUiThread(() -> {
                         Toast.makeText(flights.this, "Flight booked successfully!", Toast.LENGTH_SHORT).show();
                         // Navigate to the ticket fragment to show booking details
-                        Intent intent = new Intent(flights.this, fragment_ticket.class);  // Create a new activity for showing ticket details
+                        Intent intent = new Intent(flights.this, ticket.class);  // Create a new activity for showing ticket details
                         intent.putExtra("flight_id", flightId);
                         startActivity(intent);
                     });

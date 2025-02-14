@@ -15,13 +15,10 @@ import java.sql.SQLException;
 
 public class register extends AppCompatActivity {
     private EditText etFullName, etEmail, etPassword;
-    private Button btnRegister;
-
-    // Database connection details
+    private Button btnRegister, btnLogin;
     private static final String DB_URL = "jdbc:mysql://192.168.1.100:3306/airline_system"; // Replace with your database IP and port
     private static final String DB_USER = "root";
     private static final String DB_PASSWORD = "@Eshan9296";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +27,16 @@ public class register extends AppCompatActivity {
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etemail);
         etPassword = findViewById(R.id.etPassword);
-        btnRegister = findViewById(R.id.btnRegister);
 
+        btnRegister = findViewById(R.id.btnRegister);
+        btnLogin = findViewById(R.id.btnLogin);
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(register.this, login.class);
+                startActivity(intent);
+            }
+        });
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,24 +48,17 @@ public class register extends AppCompatActivity {
                     Toast.makeText(register.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 } else {
                     new Thread(() -> insertData(fullName, email, password)).start();
-                }
-            }
-        });
-    }
-
-    // Method to insert data into MySQL database
+                }}});}
     private void insertData(String fullName, String email, String password) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver"); // Load MySQL JDBC Driver
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-
             if (conn != null) {
                 String query = "INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)";
                 PreparedStatement statement = conn.prepareStatement(query);
                 statement.setString(1, fullName);
                 statement.setString(2, email);
                 statement.setString(3, password);
-
                 int rowsInserted = statement.executeUpdate();
                 if (rowsInserted > 0) {
                     Log.d("Register", "User registered successfully.");
@@ -69,9 +67,7 @@ public class register extends AppCompatActivity {
                     startActivity(intent);
                 } else {
                     Log.e("Register", "Failed to insert user.");
-                    runOnUiThread(() -> Toast.makeText(register.this, "Registration failed.", Toast.LENGTH_SHORT).show());
-                }
-
+                    runOnUiThread(() -> Toast.makeText(register.this, "Registration failed.", Toast.LENGTH_SHORT).show());}
                 statement.close();
                 conn.close();
             }
@@ -79,6 +75,4 @@ public class register extends AppCompatActivity {
             Log.e("Register", "JDBC Driver not found: " + e.getMessage());
         } catch (SQLException e) {
             Log.e("Register", "SQL Error: " + e.getMessage());
-        }
-    }
-}
+        }}}

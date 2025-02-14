@@ -43,7 +43,7 @@ dependencies {
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
-    implementation(files("C:\\mysql-connector-j-9.1.0.jar"))
+    implementation(files("\"C:\\mysql-connector-j-9.2.0\\mysql-connector-j-9.2.0.jar\""))
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
